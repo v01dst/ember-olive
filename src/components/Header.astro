@@ -1,0 +1,29 @@
+---
+const links = [
+  ['Menu', '/menu'], ['Reserve', '/reserve'], ['Order pickup', '/order'],
+  ['About', '/about'], ['Contact', '/contact'],
+];
+---
+<header class="sticky top-0 z-40 border-b border-cream-200 bg-cream-50/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+    <a href="/" class="font-display text-xl font-semibold tracking-tight text-charcoal-950">
+      Ember <span class="text-saffron-500">&amp;</span> Olive
+    </a>
+    <nav class="hidden gap-6 text-sm font-medium md:flex">
+      {links.map(([label, href]) => (
+        <a href={href} class="text-charcoal-800 hover:text-olive-600">{label}</a>
+      ))}
+    </nav>
+    <a href="/reserve" class="hidden rounded-full bg-olive-600 px-4 py-2 text-sm font-semibold text-cream-50 hover:bg-olive-700 md:inline-block">
+      Book a table
+    </a>
+    <details class="relative md:hidden">
+      <summary class="cursor-pointer list-none rounded p-2 text-lg text-charcoal-900" aria-label="Open menu">☰</summary>
+      <nav class="absolute left-0 right-0 top-full border-b border-cream-200 bg-cream-50 p-4">
+        {links.map(([label, href]) => (
+          <a href={href} class="block py-2 text-charcoal-800">{label}</a>
+        ))}
+      </nav>
+    </details>
+  </div>
+</header>

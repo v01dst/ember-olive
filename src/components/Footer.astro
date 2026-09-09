@@ -1,0 +1,25 @@
+---
+const days = [
+  ['Tue – Thu', '12:00 – 22:00'], ['Fri – Sat', '12:00 – 23:00'], ['Sun', '12:00 – 21:00'], ['Mon', 'Closed'],
+];
+---
+<footer class="mt-20 bg-charcoal-950 text-cream-100">
+  <div class="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-3">
+    <div>
+      <p class="font-display text-lg">Ember <span class="text-saffron-400">&amp;</span> Olive</p>
+      <p class="mt-2 text-sm text-cream-200/80">Family-run Mediterranean grill. Charcoal, olive oil, and recipes from three generations.</p>
+    </div>
+    <div class="text-sm">
+      <p class="font-semibold text-saffron-300">Find us</p>
+      <p class="mt-2">14 Cardamom Lane, Riverside District</p>
+      <p>(555) 014-2214 · hello@emberandolive.example</p>
+    </div>
+    <div class="text-sm">
+      <p class="font-semibold text-saffron-300">Hours</p>
+      <ul class="mt-2 space-y-1">
+        {days.map(([d, h]) => <li class="flex justify-between gap-6"><span>{d}</span><span>{h}</span></li>)}
+      </ul>
+    </div>
+  </div>
+  <p class="border-t border-charcoal-800 py-4 text-center text-xs text-cream-200/60">© {new Date().getFullYear()} Ember &amp; Olive</p>
+</footer>
