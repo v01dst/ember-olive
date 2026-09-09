@@ -1,0 +1,19 @@
+[
+  { "id": "hummus", "name": "Classic Hummus", "description": "Chickpeas whipped with tahini, lemon, and our own olive oil. Warm pita alongside.", "price": 8.5, "category": "mezze", "diet": ["v", "gf"], "featured": false },
+  { "id": "baba-ganoush", "name": "Baba Ganoush", "description": "Eggplant charred on the coals, folded with tahini and topped with pomegranate.", "price": 9, "category": "mezze", "diet": ["v", "gf"], "featured": false },
+  { "id": "falafel-plate", "name": "Falafel Plate", "description": "Six herbed falafel, crisp outside and green within. Tahini, pickles, warm pita.", "price": 10.5, "category": "mezze", "diet": ["v"], "featured": false },
+  { "id": "spanakopita", "name": "Spanakopita", "description": "Spinach and feta in phyllo we brush with butter by hand. Four pieces.", "price": 9.5, "category": "mezze", "diet": ["v"], "featured": false },
+  { "id": "chicken-shawarma", "name": "Chicken Shawarma Plate", "description": "Marinated 24 hours, carved off the spit. Garlic toum, fries, salad, pita.", "price": 15.5, "category": "mains", "diet": [], "featured": true },
+  { "id": "beef-shawarma", "name": "Beef Shawarma Plate", "description": "Spiced beef off the vertical spit with tahini, sumac onions, and fries.", "price": 16.5, "category": "mains", "diet": [], "featured": false },
+  { "id": "lamb-kofta", "name": "Lamb Kofta Skewers", "description": "Hand-chopped lamb with parsley and onion, grilled over charcoal. Saffron rice and grilled tomato.", "price": 18.5, "category": "mains", "diet": ["gf"], "featured": false },
+  { "id": "mixed-grill", "name": "Ember Mixed Grill", "description": "Kofta, chicken shish, and a lamb chop — the order for two that ends every argument.", "price": 34, "category": "mains", "diet": ["gf"], "featured": false },
+  { "id": "zaatar-chicken", "name": "Za'atar Roast Chicken", "description": "Half bird under a za'atar and lemon crust, garlic jus on the side.", "price": 17, "category": "mains", "diet": [], "featured": true },
+  { "id": "halloumi-bowl", "name": "Charred Halloumi Bowl", "description": "Freekeh, roasted seasonal vegetables, mint yogurt, honey-drizzled halloumi.", "price": 14.5, "category": "mains", "diet": ["v"], "featured": false },
+  { "id": "saffron-rice", "name": "Saffron Rice", "description": "Long-grain rice steeped with saffron and toasted orzo.", "price": 4.5, "category": "sides", "diet": ["v", "gf"], "featured": false },
+  { "id": "fattoush", "name": "Fattoush", "description": "Romaine, radish, tomato, and crispy pita in a sumac-lemon dressing.", "price": 7.5, "category": "sides", "diet": ["v"], "featured": false },
+  { "id": "rosemary-fries", "name": "Rosemary Fries", "description": "Twice-fried, tossed with rosemary and flaky salt.", "price": 4.5, "category": "sides", "diet": ["v", "gf"], "featured": false },
+  { "id": "baklava", "name": "Pistachio Baklava", "description": "Forty layers, made Tuesday mornings. Orange blossom syrup, Antep pistachios.", "price": 7, "category": "desserts", "diet": ["v"], "featured": false },
+  { "id": "kunafa", "name": "Cheese Kunafa", "description": "Shredded pastry around stretchy sweet cheese, hit with orange blossom syrup.", "price": 8.5, "category": "desserts", "diet": ["v"], "featured": true },
+  { "id": "mint-lemonade", "name": "Fresh Mint Lemonade", "description": "Pressed to order, heavy on the mint.", "price": 4.5, "category": "drinks", "diet": ["v", "gf"], "featured": false },
+  { "id": "turkish-coffee", "name": "Turkish Coffee", "description": "Slow-brewed in copper, served with a piece of loukoumi.", "price": 3.5, "category": "drinks", "diet": ["v", "gf"], "featured": false }
+]
