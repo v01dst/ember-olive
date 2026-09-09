@@ -35,8 +35,8 @@ describe('createReservation', () => {
     if (res.ok) expect(res.reservation.partySize).toBe(4);
   });
   it('rejects Mondays and unknown slots as INVALID', async () => {
-    expect((await createReservation(db, { ...base, date: '2026-10-05' })).code).toBe('INVALID');
-    expect((await createReservation(db, { ...base, time: '11:45' })).code).toBe('INVALID');
+    expect(await createReservation(db, { ...base, date: '2026-10-05' })).toMatchObject({ ok: false, code: 'INVALID' });
+    expect(await createReservation(db, { ...base, time: '11:45' })).toMatchObject({ ok: false, code: 'INVALID' });
   });
   it('rejects a booking that would exceed 42 seats with SLOT_FULL', async () => {
     await createReservation(db, { ...base, name: 'Big group', partySize: 40 });
