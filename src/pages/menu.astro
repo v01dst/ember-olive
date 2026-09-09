@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import MenuFilter from '../components/react/MenuFilter';
+import { MENU } from '../lib/menu';
+---
+<BaseLayout title="Menu" description="Mezze, charcoal-grilled mains, sides, sweets and drinks.">
+  <section class="mx-auto max-w-6xl px-4 py-16">
+    <SectionHeading kicker="Eat well" title="The menu" />
+    <MenuFilter client:load items={MENU} />
+  </section>
+</BaseLayout>
