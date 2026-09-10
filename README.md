@@ -65,7 +65,7 @@ src/
 **Built by Mahmoud Ahmed** · open to freelance work
 
 - Discord: `9p.1`
-- LinkedIn: https://www.linkedin.com/in/mahmoud-ahmed-8a349842b
+- LinkedIn: https://tinyurl.com/25c8fklq <!-- linkedin: https://www.linkedin.com/in/mahmoud-ahmed-8a349842b -->
 
 ## License
 
