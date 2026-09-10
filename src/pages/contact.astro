@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Contact">
+  <section class="mx-auto max-w-4xl px-4 py-16">
+    <div class="mb-10 text-center">
+      <p class="text-xs font-semibold uppercase tracking-[0.25em] text-olive-600">Say hi</p>
+      <h1 class="mt-2 font-display text-4xl font-bold">Contact</h1>
+      <p class="mt-3 text-sm text-charcoal-800">Large orders, catering, lost jackets — we have seen it all.</p>
+    </div>
+    <div class="grid gap-10 md:grid-cols-2">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4 rounded-2xl border border-cream-200 bg-white p-6">
+        <input type="hidden" name="form-name" value="contact" />
+        <p class="hidden"><label>Leave empty: <input name="bot-field" /></label></p>
+        <label class="block text-sm font-medium">
+          Name
+          <input required name="name" class="mt-1 w-full rounded-lg border border-cream-200 px-3 py-2 text-sm focus:border-olive-500" />
+        </label>
+        <label class="block text-sm font-medium">
+          Email
+          <input required type="email" name="email" class="mt-1 w-full rounded-lg border border-cream-200 px-3 py-2 text-sm focus:border-olive-500" />
+        </label>
+        <label class="block text-sm font-medium">
+          Message
+          <textarea required name="message" rows="5" class="mt-1 w-full rounded-lg border border-cream-200 px-3 py-2 text-sm focus:border-olive-500"></textarea>
+        </label>
+        <button class="w-full rounded-full bg-olive-600 py-3 font-semibold text-cream-50 hover:bg-olive-700">Send message</button>
+        <p class="text-center text-xs text-charcoal-800">We answer within a day, faster during prep hours.</p>
+      </form>
+      <div class="space-y-6">
+        <div class="overflow-hidden rounded-2xl border border-cream-200">
+          <iframe
+            title="Map to Ember & Olive"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-74.02%2C40.72%2C-73.98%2C40.75&layer=mapnik"
+            class="h-72 w-full" loading="lazy"></iframe>
+        </div>
+        <div class="rounded-2xl border border-cream-200 bg-white p-6 text-sm">
+          <p class="font-semibold">Ember &amp; Olive</p>
+          <p class="mt-1">14 Cardamom Lane, Riverside District</p>
+          <p>(555) 014-2214</p>
+          <p class="mt-2 text-charcoal-800">Walk-ins always welcome; reservations recommended Fri–Sat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
