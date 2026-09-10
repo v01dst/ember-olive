@@ -13,8 +13,8 @@
     "db:seed": "tsx scripts/seed.ts"
   },
   "dependencies": {
-    "@astrojs/netlify": "^8.2.5",
     "@astrojs/react": "^6.0.5",
+    "@astrojs/vercel": "^11.0.10",
     "@libsql/client": "^0.18.0",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.3.2",
