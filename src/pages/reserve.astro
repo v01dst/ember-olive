@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ReservationForm from '../components/react/ReservationForm';
+---
+<BaseLayout title="Reserve a table">
+  <section class="mx-auto max-w-6xl px-4 py-16">
+    <div class="mb-10 text-center">
+      <p class="text-xs font-semibold uppercase tracking-[0.25em] text-olive-600">Book with us</p>
+      <h1 class="mt-2 font-display text-4xl font-bold">Reserve a table</h1>
+      <p class="mt-3 text-sm text-charcoal-800">Seatings every half hour, 12:00–21:00. Closed Mondays.</p>
+    </div>
+    <ReservationForm client:load />
+  </section>
+</BaseLayout>
