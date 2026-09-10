@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import OrderCart from '../components/react/OrderCart';
+import { MENU } from '../lib/menu';
+---
+<BaseLayout title="Order pickup">
+  <section class="mx-auto max-w-6xl px-4 py-16">
+    <div class="mb-10 text-center">
+      <p class="text-xs font-semibold uppercase tracking-[0.25em] text-olive-600">Skip the wait</p>
+      <h1 class="mt-2 font-display text-4xl font-bold">Order pickup</h1>
+      <p class="mt-3 text-sm text-charcoal-800">Straight from the coals to your hands in about twenty minutes.</p>
+    </div>
+    <OrderCart client:load items={MENU} />
+  </section>
+</BaseLayout>
