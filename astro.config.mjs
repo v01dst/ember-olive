@@ -6,6 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   output: 'static',
+  server: { startupTimeout: 180000 },
   adapter: netlify(),
   integrations: [react()],
   vite: { plugins: [tailwindcss()] },

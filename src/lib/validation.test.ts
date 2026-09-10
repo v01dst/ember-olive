@@ -29,6 +29,9 @@ describe('orderSchema', () => {
   it('accepts a valid order', () => {
     expect(orderSchema.safeParse(valid).success).toBe(true);
   });
+  it('accepts a parenthesized phone number', () => {
+    expect(orderSchema.safeParse({ ...valid, phone: '(555) 010-0000' }).success).toBe(true);
+  });
   it('rejects empty carts and silly quantities', () => {
     expect(orderSchema.safeParse({ ...valid, items: [] }).success).toBe(false);
     expect(orderSchema.safeParse({ ...valid, items: [{ id: 'hummus', qty: 99 }] }).success).toBe(false);

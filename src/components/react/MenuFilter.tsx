@@ -3,13 +3,14 @@ import type { MenuItem } from '../../lib/menu';
 
 type Diet = 'all' | 'v' | 'gf';
 
-const CATEGORY_LABELS: Record<string, string> = {
+const CATEGORIES = ['all', 'mezze', 'mains', 'sides', 'desserts', 'drinks'] as const;
+type Category = 'all' | (typeof CATEGORIES)[number];
+const CATEGORY_LABELS: Record<Category, string> = {
   all: 'Everything', mezze: 'Mezze', mains: 'From the coals', sides: 'Sides', desserts: 'Sweets', drinks: 'Drinks',
 };
-const CATEGORIES = ['all', 'mezze', 'mains', 'sides', 'desserts', 'drinks'] as const;
 
 export default function MenuFilter({ items }: { items: MenuItem[] }) {
-  const [cat, setCat] = useState<string>('all');
+  const [cat, setCat] = useState<Category>('all');
   const [diet, setDiet] = useState<Diet>('all');
   const filtered = items.filter(
     (i) => (cat === 'all' || i.category === cat) && (diet === 'all' || i.diet.includes(diet)),
@@ -19,7 +20,7 @@ export default function MenuFilter({ items }: { items: MenuItem[] }) {
   return (
     <div>
       <div className="flex flex-wrap justify-center gap-2">
-        {CATEGORIES.map((c: string) => (
+        {CATEGORIES.map((c) => (
           <button key={c} onClick={() => setCat(c)} className={pill(cat === c)}>
             {CATEGORY_LABELS[c]}
           </button>

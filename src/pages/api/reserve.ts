@@ -1,5 +1,6 @@
 export const prerender = false;
 import type { APIRoute } from 'astro';
+import { z } from 'zod';
 import { db } from '../../lib/db';
 import { createReservation } from '../../lib/services/reservations';
 import { reservationSchema } from '../../lib/validation';
@@ -11,7 +12,7 @@ export const POST: APIRoute = async ({ request }) => {
   }
   const parsed = reservationSchema.safeParse(body);
   if (!parsed.success) {
-    return Response.json({ error: 'Check the highlighted fields.', fields: parsed.error.flatten().fieldErrors }, { status: 400 });
+    return Response.json({ error: 'Check the highlighted fields.', fields: z.flattenError(parsed.error).fieldErrors }, { status: 400 });
   }
   const result = await createReservation(db, parsed.data);
   if (!result.ok) {

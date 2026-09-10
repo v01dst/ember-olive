@@ -5,7 +5,7 @@ const links = [
 ];
 ---
 <header class="sticky top-0 z-40 border-b border-cream-200 bg-cream-50/95 backdrop-blur">
-  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+  <div class="relative z-40 mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
     <a href="/" class="font-display text-xl font-semibold tracking-tight text-charcoal-950">
       Ember <span class="text-saffron-500">&amp;</span> Olive
     </a>
@@ -17,7 +17,7 @@ const links = [
     <a href="/reserve" class="hidden rounded-full bg-olive-600 px-4 py-2 text-sm font-semibold text-cream-50 hover:bg-olive-700 md:inline-block">
       Book a table
     </a>
-    <details class="relative md:hidden">
+    <details class="md:hidden">
       <summary class="cursor-pointer list-none rounded p-2 text-lg text-charcoal-900" aria-label="Open menu">☰</summary>
       <nav class="absolute left-0 right-0 top-full border-b border-cream-200 bg-cream-50 p-4">
         {links.map(([label, href]) => (
