@@ -6,6 +6,9 @@ describe('reservationSchema', () => {
   it('accepts a valid reservation', () => {
     expect(reservationSchema.safeParse(valid).success).toBe(true);
   });
+  it('accepts a parenthesized phone number', () => {
+    expect(reservationSchema.safeParse({ ...valid, phone: '(555) 010-0000' }).success).toBe(true);
+  });
   it('coerces partySize from string and bounds it', () => {
     expect(reservationSchema.safeParse({ ...valid, partySize: '4' }).success).toBe(true);
     expect(reservationSchema.safeParse({ ...valid, partySize: 11 }).success).toBe(false);
